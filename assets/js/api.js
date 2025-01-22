@@ -13,7 +13,7 @@ document.getElementById('searcher').addEventListener('submit', (event) => {
 
 async function fetchRegionWeather(region) {
     try {
-        const geocodeURL = `http://api.openweathermap.org/geo/1.0/direct?q=${region}&limit=1&appid=${API_KEY}`;
+        const geocodeURL = `https://api.openweathermap.org/geo/1.0/direct?q=${region}&limit=1&appid=${API_KEY}`;
         const geocodeResponse = await fetch(geocodeURL);
         if (!geocodeResponse.ok) throw new Error('Geocode request failed');
 
